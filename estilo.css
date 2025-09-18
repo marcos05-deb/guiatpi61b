@@ -1,0 +1,74 @@
+/* Imágenes de productos */
+img {
+  width: 3cm;
+  height: 3cm;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Tabla de productos */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Encabezados */
+th {
+  background: #d62828;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+}
+
+th#price {
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+th#price:hover {
+  background: #b71c1c;
+}
+
+/* Filas */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Lista */
+li {
+  color: #0077cc;
+  margin: 5px 0;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+  accent-color: #d62828;
+  margin: 8px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Filtrado por checkboxes */
+input#c1:checked ~ table tbody tr.c1 { display: table-row; }
+input#c1:not(:checked) ~ table tbody tr.c1 { display: none; }
+
+input#c2:checked ~ table tbody tr.c2 { display: table-row; }
+input#c2:not(:checked) ~ table tbody tr.c2 { display: none; }
+
+input#c3:checked ~ table tbody tr.c3 { display: table-row; }
+input#c3:not(:checked) ~ table tbody tr.c3 { display: none; }
+
+input#c4:checked ~ table tbody tr.c4 { display: table-row; }
+input#c4:not(:checked) ~ table tbody tr.c4 { display: none; }
